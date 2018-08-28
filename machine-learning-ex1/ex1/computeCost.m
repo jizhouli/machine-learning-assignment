@@ -13,8 +13,18 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
+for i = 1:m
+    polynomial_result = theta(1);
+    for j = 1:length(theta)-1
+        polynomial_result = polynomial_result + X(i,j)*theta(j+1);
+        % fprintf('%d,%d -> %f - %f \n', i, j, polynomial_result, y(i));
+    J = J + (polynomial_result - y(i))^2;
+    % fprintf('J is %f \n', J);
+    end;
+end;
 
-
+J = J / (2*m);
+% fprintf('J = %f \n', J);
 
 
 % =========================================================================
