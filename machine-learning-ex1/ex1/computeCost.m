@@ -14,13 +14,14 @@ J = 0;
 %               You should set J to the cost.
 
 for i = 1:m
-    polynomial_result = theta(1);
-    for j = 1:length(theta)-1
-        polynomial_result = polynomial_result + X(i,j)*theta(j+1);
-        % fprintf('%d,%d -> %f - %f \n', i, j, polynomial_result, y(i));
-    J = J + (polynomial_result - y(i))^2;
-    % fprintf('J is %f \n', J);
+    polynomial_result = 0; % theta(1);
+    for j = 1:length(theta)
+        polynomial_result = polynomial_result + X(i,j)*theta(j);
+        % fprintf('%d, %d: %f, %f \n', i, j, polynomial_result, y(i));
     end;
+    J = J + (polynomial_result - y(i))^2;
+	% fprintf('%d: pr=%f, y(i)=%f, J=%f\n', i, polynomial_result, y(i), J);
+    % fprintf('J is %f \n', J);
 end;
 
 J = J / (2*m);
