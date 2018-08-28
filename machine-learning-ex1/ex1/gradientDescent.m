@@ -28,7 +28,7 @@ for iter = 1:num_iters
 	end;
 	theta_1 = theta(2) - alpha / m * sigma;
 
-	theta = [theta_0, theta_1];
+	theta = [theta_0; theta_1];
 
 	% cost = computeCost(X, y, theta);
 	% fprintf('theta0 = %f, theta1=%f cost=%f \n', theta_0, theta_1, cost);
