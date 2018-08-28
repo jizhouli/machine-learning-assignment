@@ -30,7 +30,7 @@ clear ; close all; clc
 % Complete warmUpExercise.m
 fprintf('Running warmUpExercise ... \n');
 fprintf('5x5 Identity Matrix: \n');
-% warmUpExercise()
+warmUpExercise()
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
@@ -43,7 +43,7 @@ m = length(y); % number of training examples
 
 % Plot Data
 % Note: You have to complete the code in plotData.m
-% plotData(X, y);
+plotData(X, y);
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
