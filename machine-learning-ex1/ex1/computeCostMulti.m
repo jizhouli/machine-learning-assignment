@@ -13,7 +13,7 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
-feature_num = length(theta); %size(X, 2);
+feature_num = size(X,2); % length(theta); %size(X, 2);
 for i = 1:m
 	poly_res = 0; % polynomial function of each line/raw
 	for j = 1:feature_num
@@ -25,5 +25,4 @@ end;
 
 J = J /(2*m);
 % =========================================================================
-
 end
